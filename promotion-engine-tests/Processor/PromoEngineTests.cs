@@ -53,20 +53,20 @@ namespace promotion_engine_tests
                         new PromoModels.Buy
                         {
                             Category = "Product A",
-                            Count = 3
+                            Count = 2
                         }
                     },
-                    Description = "3 of A's for 130",
+                    Description = "3 of A's for 130",   // same as Buy 2 A's and get third for 30 
                     Gets = new List<PromoModels.Get>
                     {
                         new PromoModels.Get
                         {
                             Category = "Product A",
-                            All = false,
-                            Count = 1,
+                            All = true,
+                            Count = 0,
                             Off = new PromoModels.Off
                             {
-                                Fixed = new PromoModels.Fixed{ Price = 130F }                                
+                                Fixed = new PromoModels.Fixed{ Price = 30F }                                
                             }
                         }
                     }
